@@ -2,7 +2,7 @@ var input = require("fs").readFileSync("stdin", "utf-8")
 
 var num = input.split(" ").map(item => parseFloat(item))
 
-//num.sort((a, b) => b - a)
+num.sort((a, b) => b - a)
 
 var [A, B, C] = num
 
