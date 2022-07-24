@@ -1,19 +1,36 @@
 var input = require("fs").readFileSync("stdin", "utf-8")
 
-var palavra = input.split("\n")
+var [a,b,c] = input.split("\n");
 
-var tipo1 = ['vertebrado', 'invertebrado']
-var tipo2 = ['ave', 'mamifero', 'inseto', 'anelidio']
-var tipo3 = ['carnovoro', 'onivoro', 'herbivoro', 'hematofago']
-
-console.log('vertebrado' == 'vertebrado')
-/*
-const comparar = (palavra[1], tipo2[1]) => {
-
-    return palavra[1].length === tipo2[1].length &&
-        palavra[1].every((item, index) => item === tipo2[index]
-}
-
-
-
-console.log(typeof palavra[1])*/
+if (b === "ave"){
+    if (c === "carnivoro"){
+        console.log("aguia")
+    }
+    if (c === "onivoro"){
+        console.log("pomba")
+    }
+    
+} else if (b === "mamifero"){
+    if (c === "onivoro"){
+        console.log("homem")
+    }
+    if (c === "herbivoro"){
+        console.log("vaca")
+    }
+} else if (b === "inseto"){
+    if (c === "hematofago"){
+        console.log("pulga")
+    }
+    if (c === "herbivoro"){
+        console.log("lagarta")
+    }
+} else if (b === "anelideo"){
+    if (c === "hematofago"){
+        console.log("sanguessuga")
+    }
+    if (c === "onivoro"){
+        console.log("minhoca")
+    }
+}else{
+    console.log("Animal não encontrado!")
+} 
